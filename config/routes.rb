@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   post '/pizzerias', to: 'pizzerias#create', as: 'pizzerias'
   get '/pizzerias/:id', to: 'pizzerias#show', as: 'pizzeria'
   get '/pizzerias', to: 'pizzerias#index'
+
+  get '/pizzerias/:id/pizzas/new', to:'pizzas#new', as: 'new_pizza'
+  post '/pizzerias/:id/pizzas', to: "pizzas#create", as: "pizzas"
+  get '/pizzerias/:pizzeria_id/pizzas/:id', to: "pizzas#show", as: "pizza"
+
 end
