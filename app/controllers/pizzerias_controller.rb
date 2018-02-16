@@ -10,6 +10,7 @@ class PizzeriasController < ApplicationController
 
   def show
     @pizzeria = Pizzeria.find(params[:id])
+    
   end
 
   def index
